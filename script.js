@@ -27,7 +27,6 @@ classes.map(c=>`<option>${c}</option>`).join("");
 
 document.getElementById("classSelect").value = data.class;
 
-renderSettings();
 renderMain();
 
 }
