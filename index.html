@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>オンライン授業ツール</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="mainPage">
+
+<header>
+    <div class="headerTitle">
+        <div class="mark">オ</div>
+        <div>
+            <h1>オンライン授業ツール</h1>
+            <div class="sub">挨拶とZoomをすぐ手元に</div>
+        </div>
+    </div>
+    <button id="settingBtn" class="iconBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        設定
+    </button>
+</header>
+
+<section class="box">
+    <h2><span class="dot"></span>挨拶文</h2>
+    <div id="messages"></div>
+</section>
+
+<section class="box">
+    <h2><span class="dot"></span>Zoom</h2>
+    <div id="zoomList"></div>
+</section>
+
+</div>
+
+
+<!-- ================= 設定画面 ================= -->
+
+<div id="settingPage" class="hidden">
+
+<header>
+    <div class="headerTitle">
+        <div class="mark">設</div>
+        <div>
+            <h1>設定</h1>
+            <div class="sub">名前・クラス・授業を編集</div>
+        </div>
+    </div>
+</header>
+
+<section class="box">
+
+<h2><span class="dot"></span>名前</h2>
+
+<label>漢字</label>
+<input id="nameKanji" placeholder="例：山田 太郎">
+
+<label>カタカナ</label>
+<input id="nameKana" placeholder="例：ヤマダ タロウ">
+
+<label>クラス</label>
+<select id="classSelect"></select>
+
+</section>
+
+<section class="box">
+
+<h2><span class="dot"></span>授業設定</h2>
+
+<div id="settings"></div>
+
+</section>
+
+<div class="buttons">
+<button id="saveBtn" class="primaryBtn">保存する</button>
+<button id="backBtn" class="ghostBtn">戻る</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
