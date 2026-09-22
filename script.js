@@ -2,8 +2,8 @@ const defaultData = {
 nameKanji:"",
 nameKana:"",
 class:"IT11A",
-subjects:["","","","",""],
-links:["","","","",""]
+subjects:["","","","","",""],
+links:["","","","","",""]
 };
 
 let data = JSON.parse(localStorage.getItem("toolData")) || defaultData;
@@ -12,7 +12,7 @@ const classes=[
 "IT11A","IT11B","IT11C","IT11D","DE11E","DE11F"
 ];
 
-const periodKanji=["一","二","三","四","五"];
+const periodKanji=["一","二","三","四","五","六"];
 
 const copyIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
 const checkIcon=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`;
@@ -126,7 +126,7 @@ const box=document.getElementById("settings");
 
 box.innerHTML="";
 
-for(let i=0;i<5;i++){
+for(let i=0;i<6;i++){
 
 box.innerHTML+=`
 <div class="settingRow">
@@ -153,7 +153,7 @@ data.nameKanji=document.getElementById("nameKanji").value;
 data.nameKana=document.getElementById("nameKana").value;
 data.class=document.getElementById("classSelect").value;
 
-for(let i=0;i<5;i++){
+for(let i=0;i<6;i++){
 data.subjects[i]=document.getElementById("sub"+i).value;
 data.links[i]=document.getElementById("link"+i).value;
 }
